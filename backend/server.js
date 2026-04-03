@@ -1,6 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-const path = require("path");
 
 const app = express();
 app.use(cors());
@@ -76,7 +75,6 @@ app.post("/api/content", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3001;
-app.use(express.static(path.join(__dirname, "../frontend")));
 app.listen(PORT, () =>
   console.log(`Server running on http://localhost:${PORT}`),
 );
