@@ -141,4 +141,4 @@ npm run dev
 
 Deployed on Vercel using `vercel.json` config for both static frontend and Node.js API.
 
-Live URL: _add your Vercel URL here_
+Live URL: https://content-manager-theta.vercel.app/
