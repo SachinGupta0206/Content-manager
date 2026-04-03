@@ -83,7 +83,7 @@ http://localhost:3001
 
 This project is deployed on Vercel with a `vercel.json` config that handles both the static frontend and the Node.js API.
 
-Live URL: _add your Vercel URL here_
+Live URL: https://content-manager-theta.vercel.app/
 
 ---
 
