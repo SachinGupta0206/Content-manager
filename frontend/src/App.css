@@ -34,7 +34,6 @@ h2 {
   color: #333;
 }
 
-/* Form column */
 .form-column {
   background: #fff;
   border-radius: 12px;
@@ -94,25 +93,25 @@ input[type="color"] {
   background: none;
 }
 
-/* Quill editor */
-#quillEditor {
+/* Quill */
+.quill-wrap {
   border-radius: 8px;
   overflow: hidden;
   border: 1.5px solid #ddd;
   transition: border-color 0.2s;
 }
 
-#quillEditor.invalid {
+.quill-wrap.invalid {
   border-color: #e53e3e;
 }
 
-.ql-toolbar {
+.quill-wrap .ql-toolbar {
   border: none !important;
   border-bottom: 1.5px solid #ddd !important;
   background: #fafafa;
 }
 
-.ql-container {
+.quill-wrap .ql-container {
   border: none !important;
   font-size: 0.95rem;
   min-height: 120px;
@@ -140,6 +139,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background: #4338ca;
 }
+
 button[type="submit"]:disabled {
   background: #a5b4fc;
   cursor: not-allowed;
@@ -153,7 +153,7 @@ button[type="submit"]:disabled {
   min-height: 20px;
 }
 
-/* Preview column */
+/* Preview */
 .preview-column {
   display: flex;
   flex-direction: column;
@@ -168,7 +168,6 @@ button[type="submit"]:disabled {
   background-size: cover;
   background-position: center;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
-  transition: background-image 0.4s;
   position: relative;
 }
 

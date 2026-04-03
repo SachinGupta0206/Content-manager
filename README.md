@@ -1,6 +1,37 @@
 # Content Manager
 
-A full-stack web app to manage and preview dynamic content blocks — built with **Node.js + Express** on the backend and vanilla **JavaScript** on the frontend.
+A full-stack web app to manage and preview dynamic content blocks.
+
+## Tech Stack
+
+- **Frontend:** React 19, Vite, Quill.js
+- **Backend:** Node.js, Express.js, CORS
+
+---
+
+## Project Structure
+
+```
+├── backend/
+│   ├── server.js        # Express server + API
+│   └── package.json
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── ContentForm.jsx
+│   │   │   └── Preview.jsx
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   └── main.jsx
+│   ├── index.html
+│   ├── vite.config.js
+│   └── package.json
+├── vercel.json
+└── README.md
+```
+
+---
 
 ## Features
 
@@ -8,13 +39,8 @@ A full-stack web app to manage and preview dynamic content blocks — built with
 - HEX color picker with live sync
 - Background image URL with server-side accessibility check
 - Client-side + server-side validation with inline error messages
-- Live content preview that updates on successful submit
+- Live content preview updates on successful submit
 - Responsive two-column layout
-
-## Tech Stack
-
-- **Frontend:** HTML, CSS, Vanilla JS, Quill.js
-- **Backend:** Node.js, Express, CORS
 
 ---
 
@@ -22,11 +48,8 @@ A full-stack web app to manage and preview dynamic content blocks — built with
 
 ### Prerequisites
 
-Make sure you have the following installed:
-
-- [Node.js](https://nodejs.org/) v18 or higher
-- npm (comes with Node.js)
-- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/) v18+
+- npm
 
 ---
 
@@ -39,51 +62,40 @@ cd Content-manager
 
 ---
 
-### 2. Install Dependencies
+### 2. Install Backend Dependencies
 
 ```bash
 cd backend
 npm install
 ```
 
----
-
-### 3. Run the Server
+### 3. Install Frontend Dependencies
 
 ```bash
+cd frontend
+npm install
+```
+
+---
+
+### 4. Run the App
+
+Backend (Terminal 1):
+
+```bash
+cd backend
 npm start
 ```
 
-Server will start at: `http://localhost:3001`
+Frontend (Terminal 2):
 
----
-
-### 4. Open the App
-
-Open your browser and go to:
-
-```
-http://localhost:3001
+```bash
+cd frontend
+npm run dev
 ```
 
----
-
-### 5. Using the App
-
-1. Enter a **Heading**
-2. Write a **Paragraph** using the rich text editor
-3. Paste a valid **Background Image URL** (must start with `https://`)
-4. Pick a **Text Color** using the color picker or type a HEX code (e.g. `#ffffff`)
-5. Click **Submit**
-6. The **Preview** on the right will update with your content
-
----
-
-## Deployment (Vercel)
-
-This project is deployed on Vercel with a `vercel.json` config that handles both the static frontend and the Node.js API.
-
-Live URL: https://content-manager-theta.vercel.app/
+- Frontend: `http://localhost:5173`
+- Backend API: `http://localhost:3001`
 
 ---
 
@@ -125,16 +137,8 @@ Live URL: https://content-manager-theta.vercel.app/
 
 ---
 
-## Project Structure
+## Deployment
 
-```
-├── backend/
-│   ├── server.js        # Express server + API
-│   └── package.json
-├── frontend/
-│   ├── index.html       # Main UI
-│   ├── app.js           # Form logic + API calls
-│   └── style.css        # Styling
-├── vercel.json          # Vercel deployment config
-└── README.md
-```
+Deployed on Vercel using `vercel.json` config for both static frontend and Node.js API.
+
+Live URL: _add your Vercel URL here_
