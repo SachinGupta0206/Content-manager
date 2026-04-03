@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3001/api/content";
+const API_URL = "/api/content";
 const HEX_REGEX = /^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/;
 
 // Init Quill
