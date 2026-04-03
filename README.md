@@ -16,32 +16,82 @@ A full-stack web app to manage and preview dynamic content blocks — built with
 - **Frontend:** HTML, CSS, Vanilla JS, Quill.js
 - **Backend:** Node.js, Express, CORS
 
-## Getting Started
+---
+
+## Setup Instructions
 
 ### Prerequisites
 
-- Node.js v18+
+Make sure you have the following installed:
 
-### Installation
+- [Node.js](https://nodejs.org/) v18 or higher
+- npm (comes with Node.js)
+- [Git](https://git-scm.com/)
+
+---
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/SachinGupta0206/Content-manager.git
+cd Content-manager
+```
+
+---
+
+### 2. Install Dependencies
 
 ```bash
 cd backend
 npm install
 ```
 
-### Run
+---
+
+### 3. Run the Server
 
 ```bash
 npm start
 ```
 
-Then open [http://localhost:3001](http://localhost:3001) in your browser.
+Server will start at: `http://localhost:3001`
 
-## API
+---
+
+### 4. Open the App
+
+Open your browser and go to:
+
+```
+http://localhost:3001
+```
+
+---
+
+### 5. Using the App
+
+1. Enter a **Heading**
+2. Write a **Paragraph** using the rich text editor
+3. Paste a valid **Background Image URL** (must start with `https://`)
+4. Pick a **Text Color** using the color picker or type a HEX code (e.g. `#ffffff`)
+5. Click **Submit**
+6. The **Preview** on the right will update with your content
+
+---
+
+## Deployment (Vercel)
+
+This project is deployed on Vercel with a `vercel.json` config that handles both the static frontend and the Node.js API.
+
+Live URL: _add your Vercel URL here_
+
+---
+
+## API Reference
 
 ### `POST /api/content`
 
-**Request body:**
+**Request Body:**
 
 ```json
 {
@@ -52,7 +102,7 @@ Then open [http://localhost:3001](http://localhost:3001) in your browser.
 }
 ```
 
-**Success response (`200`):**
+**Success `200`:**
 
 ```json
 {
@@ -62,7 +112,7 @@ Then open [http://localhost:3001](http://localhost:3001) in your browser.
 }
 ```
 
-**Validation error response (`400`):**
+**Validation Error `400`:**
 
 ```json
 {
@@ -73,14 +123,18 @@ Then open [http://localhost:3001](http://localhost:3001) in your browser.
 }
 ```
 
+---
+
 ## Project Structure
 
 ```
 ├── backend/
-│   ├── server.js
+│   ├── server.js        # Express server + API
 │   └── package.json
-└── frontend/
-    ├── index.html
-    ├── app.js
-    └── style.css
+├── frontend/
+│   ├── index.html       # Main UI
+│   ├── app.js           # Form logic + API calls
+│   └── style.css        # Styling
+├── vercel.json          # Vercel deployment config
+└── README.md
 ```
